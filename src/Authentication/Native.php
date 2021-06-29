@@ -172,7 +172,8 @@ class Native
         return V::keySet(
             V::key('microsoft_client_id', V::stringType()->notEmpty()),
             V::key('microsoft_client_secret', V::stringType()->notEmpty()),
-            V::key('microsoft_refresh_token', V::stringType()->notEmpty())
+            V::key('microsoft_refresh_token', V::stringType()->notEmpty()),
+            V::key('redirect_uri', V::stringType()->notEmpty())
         );
     }
 
