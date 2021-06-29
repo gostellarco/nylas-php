@@ -125,6 +125,8 @@ class Native
             case 'icloud':
             case 'hotmail': return $this->knownProviderRule();
 
+            case 'office365': return $this->microsoftProviderRule();
+
             case 'gmail':    return $this->gmailProviderRule();
 
             case 'exchange': return $this->exchangeProviderRule();
@@ -157,6 +159,20 @@ class Native
             V::key('google_client_id', V::stringType()->notEmpty()),
             V::key('google_client_secret', V::stringType()->notEmpty()),
             V::key('google_refresh_token', V::stringType()->notEmpty())
+        );
+    }
+
+     /**
+     * office365 provider rule
+     *
+     * @return \Nylas\Utilities\Validator
+     */
+    private function microsoftProviderRule(): V
+    {
+        return V::keySet(
+            V::key('microsoft_client_id', V::stringType()->notEmpty()),
+            V::key('microsoft_client_secret', V::stringType()->notEmpty()),
+            V::key('microsoft_refresh_token', V::stringType()->notEmpty())
         );
     }
 
