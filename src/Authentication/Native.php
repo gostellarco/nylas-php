@@ -23,7 +23,7 @@ class Native
      */
     private array $providers =
     [
-        'gmail', 'yahoo', 'exchange', 'outlook', 'imap', 'icloud', 'hotmail', 'aol',
+        'gmail', 'yahoo', 'exchange', 'office365', 'outlook', 'imap', 'icloud', 'hotmail', 'aol',
     ];
 
     // ------------------------------------------------------------------------------
